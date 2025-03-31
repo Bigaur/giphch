@@ -52,12 +52,16 @@ const handleSearch = async () => {
       </div>
 
       {/* GIF Card: shows only if gifUrl exists, max width, white background, padding, shadow */}
-      {gifUrl && (
-        <div className="mt-6 w-full max-w-md bg-white p-4 rounded-md shadow-md">
-          {/* GIF image: full width, auto height for responsiveness */}
-          <img src={gifUrl} alt="GIF result" className="w-full h-auto" />
-        </div>
-      )}
+      
+{gifUrl && (
+  <div className="mt-6 w-full max-w-md bg-white p-4 rounded-md shadow-md">
+    {/* Wrap the image in an anchor tag to make it clickable */}
+    <a href={gifUrl} target="_blank" rel="noopener noreferrer">
+      {/* GIF image: full width, auto height for responsiveness */}
+      <img src={gifUrl} alt="GIF result" className="w-full h-auto" />
+    </a>
+  </div>
+)}
     </div>
   );
 }
