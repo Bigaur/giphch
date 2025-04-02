@@ -8,8 +8,8 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const search = searchParams.get("search");
 
-  // Giphy API key (replace with your actual key)
-  const apiKey = "pdWEnauPX8WLpjU55sYusSa8thFfhr48"; // Replace with your Giphy API key
+  
+  const apiKey = "pdWEnauPX8WLpjU55sYusSa8thFfhr48";
 
   // Construct the Giphy API URL to fetch the first GIF
   const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${search}&limit=1`;
